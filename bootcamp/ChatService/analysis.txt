@@ -1,0 +1,22 @@
+1. use cases
+a. user write message to another user or a group of users
+b. user could receive message 
+c. voice message or video chat? not at this time. (The nature is the same, but data and bandwidth could be challenging)
+d. add friend, remove friend.
+
+2. system constraints
+how many daily active users? 1M
+
+average 100 messages 
+1 message contains 200 characters
+
+total data = 1M * 100 * 200byte = 20GB/day
+
+
+3. design component, API, algorithm
+start with the simple one, forget about the 1M users now.
+components:
+user service(friend)	message service				group chat service	
+						mid, uid, uid, content		gid, uid, content timestamp
+
+
